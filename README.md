@@ -19,9 +19,9 @@
   
   1: Safety and Security, Clarity, Approachability, Developer Experience, Resource Oriented Programming
   
-  2: The five pillars are useful because they keep everything inline and incheck with out it there would only 
+  2: The five pillars are useful because they keep everything inline and incheck without it there would only 
      be chaos. With all five pillars in place everyone involved can feel at ease when approaching a secure and 
-     easy mangage application.
+     easy to mangage application.
      
 # Chapter 1.5 : Reviewed
 
