@@ -24,5 +24,7 @@
      easy to mangage application.
      
 # Chapter 1.5 : Reviewed
+  https://www.codecademy.com/<br>
+  
 
 # Chapter 2.0 : Day 1
