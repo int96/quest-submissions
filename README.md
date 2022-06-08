@@ -28,3 +28,8 @@
   
 
 # Chapter 2.0 : Day 1
+1:
+![image](https://user-images.githubusercontent.com/12196769/172684905-69efb587-840c-4755-a9e8-fce2b63e088f.png)
+
+2:
+![image](https://user-images.githubusercontent.com/12196769/172685025-3d659f1d-79e9-466c-aeb2-a0c6193e3922.png)
