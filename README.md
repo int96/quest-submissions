@@ -40,7 +40,7 @@
   3: Difference in Prepare Phase and Execute Phase is Prepare is where we access the information/data in the account and Execute is when we change the data.<br>
   4: <br>
   # Contract:
-  ![image](https://user-images.githubusercontent.com/12196769/172890972-77fdea04-f052-42e5-94c7-89a0167acfa0.png)
+  ![image](https://user-images.githubusercontent.com/12196769/172897529-acfa5895-47c2-42b4-a619-d140a451c904.png)
   # Transaction:
   ![image](https://user-images.githubusercontent.com/12196769/172896880-63306753-ad67-4ef1-9d8c-d3047546e655.png)
   # Script:
