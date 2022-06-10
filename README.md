@@ -46,3 +46,16 @@
   # Script:
   ![image](https://user-images.githubusercontent.com/12196769/172897086-0a48d577-a2cf-4bfa-b38e-d64ab6f8e491.png)
 
+# Chapter 2.0 : Day 3
+  1:<br>
+  ![image](https://user-images.githubusercontent.com/12196769/173107977-b0686f4c-292c-45fb-973a-96be27182bc5.png)
+  2:<br>
+  ![image](https://user-images.githubusercontent.com/12196769/173117786-4b2f0d27-d034-49f1-b8d9-7f8b02643dd7.png)
+  3: When accessing values from a Dictionary you will always have optionals. So if you want the actual type and not the otional you must unwrap it.<br>
+  Example<br>
+  ![image](https://user-images.githubusercontent.com/12196769/173120424-00f6258f-c59b-4020-8bf7-c5aed28962e5.png)
+  4:<br>
+  * What the error message means:
+  
+  * Why we're getting this error
+  * How to fix it
