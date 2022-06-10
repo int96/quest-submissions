@@ -67,35 +67,14 @@
  
  # Chapter 2.0 : Day 4
    1:<details>
-      <summary>Accounts Code</summary><br>
-      pub contract hero {<br>
+   <summary>Accounts Code</summary>
+      
+   </details>   
+   
+  2:<details>
+  <summary>Accounts Code</summary>
+  
+  </details>
+  
 
-    pub var allStats: {Address: stats}<br>
-
-    pub struct stats {
-        pub let health: Int
-        pub let armor: Int
-        pub let potions: Int
-        pub let account: Address
-
-        init(_health: Int, _armor: Int, _potions: Int, _account: Address) {
-            self.health = _health
-            self.armor = _armor
-            self.potions = _potions
-            self.account = _account
-        }
-    }
-    pub fun addStats(health: Int, armor: Int, potions: Int, account: Address) {
-        let newStats = stats(_health: health, _armor: armor, _potions: potions, _account: account)
-        self.allStats[account] = newStats
-    }
-    init() {
-        self.allStats = {}
-    }
-}
-
-     </details>   
-   ![image](https://user-images.githubusercontent.com/12196769/173134522-936ca6a6-a6cd-46bb-b60b-0107443ce929.png)<br>
-
-
-
+  3:
