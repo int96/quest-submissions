@@ -29,10 +29,10 @@
 
 # Chapter 2.0 : Day 1
 # 1:
-![image](https://user-images.githubusercontent.com/12196769/172684905-69efb587-840c-4755-a9e8-fce2b63e088f.png)
+![image](https://user-images.githubusercontent.com/12196769/172684905-69efb587-840c-4755-a9e8-fce2b63e088f.png)<br>
 
 # 2:
-![image](https://user-images.githubusercontent.com/12196769/172685025-3d659f1d-79e9-466c-aeb2-a0c6193e3922.png)
+![image](https://user-images.githubusercontent.com/12196769/172685025-3d659f1d-79e9-466c-aeb2-a0c6193e3922.png)<br>
 
 # Chapter 2.0 : Day 2
   1: Because it doesn't modify the state. We want to change our information.<br>
@@ -40,22 +40,32 @@
   3: Difference in Prepare Phase and Execute Phase is Prepare is where we access the information/data in the account and Execute is when we change the data.<br>
   4: <br>
   # Contract:
-  ![image](https://user-images.githubusercontent.com/12196769/172897529-acfa5895-47c2-42b4-a619-d140a451c904.png)
+  ![image](https://user-images.githubusercontent.com/12196769/172897529-acfa5895-47c2-42b4-a619-d140a451c904.png)<br>
   # Transaction:
-  ![image](https://user-images.githubusercontent.com/12196769/172896880-63306753-ad67-4ef1-9d8c-d3047546e655.png)
+  ![image](https://user-images.githubusercontent.com/12196769/172896880-63306753-ad67-4ef1-9d8c-d3047546e655.png)<br>
   # Script:
-  ![image](https://user-images.githubusercontent.com/12196769/172897086-0a48d577-a2cf-4bfa-b38e-d64ab6f8e491.png)
+  ![image](https://user-images.githubusercontent.com/12196769/172897086-0a48d577-a2cf-4bfa-b38e-d64ab6f8e491.png)<br>
 
 # Chapter 2.0 : Day 3
   1:<br>
-  ![image](https://user-images.githubusercontent.com/12196769/173107977-b0686f4c-292c-45fb-973a-96be27182bc5.png)
+  ![image](https://user-images.githubusercontent.com/12196769/173107977-b0686f4c-292c-45fb-973a-96be27182bc5.png)<br>
   2:<br>
-  ![image](https://user-images.githubusercontent.com/12196769/173117786-4b2f0d27-d034-49f1-b8d9-7f8b02643dd7.png)
+  ![image](https://user-images.githubusercontent.com/12196769/173117786-4b2f0d27-d034-49f1-b8d9-7f8b02643dd7.png)<br>
   3: When accessing values from a Dictionary you will always have optionals. So if you want the actual type and not the otional you must unwrap it.<br>
   Example<br>
-  ![image](https://user-images.githubusercontent.com/12196769/173120424-00f6258f-c59b-4020-8bf7-c5aed28962e5.png)
+  ![image](https://user-images.githubusercontent.com/12196769/173120424-00f6258f-c59b-4020-8bf7-c5aed28962e5.png)<br>
   4:<br>
   * What the error message means:
-  
+    Return Type used was a String, but the Value Returned was an optional.
   * Why we're getting this error
+    Type Mismatch Return Value does not match the Return Type
   * How to fix it
+    You can change the Return Type to String?<br>
+    ![image](https://user-images.githubusercontent.com/12196769/173122834-00978e2f-db34-4450-9e32-9895c03fbc4d.png)<br>
+    You could even use a Force-Unwrap Operator<br>
+    ![image](https://user-images.githubusercontent.com/12196769/173123025-5e7cfae9-ef3c-461b-8384-48b73b05ef9a.png)<br>
+ 
+ # Chapter 2.0 : Day 4
+   
+
+
