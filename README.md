@@ -53,7 +53,7 @@
   ![image](https://user-images.githubusercontent.com/12196769/173117786-4b2f0d27-d034-49f1-b8d9-7f8b02643dd7.png)<br>
   3: When accessing values from a Dictionary you will always have optionals. So if you want the actual type and not the otional you must unwrap it.<br>
   Example<br>
-  ![image](https://user-images.githubusercontent.com/12196769/173120424-00f6258f-c59b-4020-8bf7-c5aed28962e5.png)<br>
+  ![image](https://user-images.githubusercontent.com/12196769/173171800-b8345510-0856-4bf8-a214-84bb9b5eb8b5.png)<br>
   <i>On line 3 the ? is not nessary since an optional is returned by default.</i>
   4:<br>
   * What the error message means:
