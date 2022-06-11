@@ -66,55 +66,21 @@
     You could even use a Force-Unwrap Operator<br>
     ![image](https://user-images.githubusercontent.com/12196769/173123025-5e7cfae9-ef3c-461b-8384-48b73b05ef9a.png)<br>
  
- # Chapter 2.0 : Day 4 ***Still working on ***
-   1: *Account Code*<br>
-   2: *Account Code*<br>
-   <details>
-   <summary>Accounts Code</summary>
-      pub contract Hero {
+ # Chapter 2.0 : Day 4
+   1: Deploy a new contract that has a Struct of your choosing inside of it (must be different than Profile).
+   ![image](https://user-images.githubusercontent.com/12196769/173182746-5512b8f6-b3fc-4dd7-802e-20f4d1e9b124.png)<br>
+   2: Create a dictionary or array that contains the Struct you defined.     
+   3: Create a function to add to that array/dictionary.
+   ![image](https://user-images.githubusercontent.com/12196769/173182766-d08ff9a9-852d-4cc0-b938-4f2fbc4b725f.png)<br>
+   4: Add a transaction to call that function in step 3.
+   5: Add a script to read the Struct you defined.
+   ![image](https://user-images.githubusercontent.com/12196769/173182803-ea63963d-cb24-4399-a9a8-80850174beba.png)<br>
+   # Accounts
+   ![image](https://user-images.githubusercontent.com/12196769/173180956-661c267b-c77a-49cc-9213-2d9665331211.png)<br>
+   # Transactions
+   ![image](https://user-images.githubusercontent.com/12196769/173181031-1445a99d-68c0-4bf3-81dc-51f3d7627565.png)<br>
+   # Scripts
+   ![image](https://user-images.githubusercontent.com/12196769/173182685-a1333ca0-29ea-4ffb-854c-a3b3be5a12ae.png)
 
-    pub var allStats: {Address: Stats}
 
-pub struct Stats {
-    pub let health: Int
-    pub let armor: Int
-    pub let potions: Int
-    pub let account: Address
-
-    init(_health: Int, _armor: Int, _potions: Int, _account: Address) {
-        self.health = _health
-        self.armor = _armor
-        self.potions = _potions
-        self.account = _account
-    }
-}
-pub fun addStat(health: Int, armor: Int, potions: Int, account: Address) {
-        let newStat = Stats(_health: health, _armor: armor, _potions: potions, _account: account)
-        self.allStats[account] = newStat
-    }
-
-    init() {
-        self.allStats = {}
-    }
-
-}
-   </details>   
-  [image](https://user-images.githubusercontent.com/12196769/173178983-762f3372-2be6-4669-8942-d224579d61bf.png)<br>
-  3:<br>
-  <details>
-  <summary>Account Code</summary>
-  import Hero from 0x01
-
-transaction(health: Int, armor: Int, potions: Int, account: Address) {
-
-    prepare(signer: AuthAccount) {}
-
-    execute {
-    Hero.addStat(health: health, armor: armor, potions: potions, account: account)
-        log("We're done.")
-    }
-}
-  </details>
-  ![image](https://user-images.githubusercontent.com/12196769/173179402-7ee9e929-c57f-4dab-be4e-a3dfaacb591f.png)<br>
-  4:<br>
   
