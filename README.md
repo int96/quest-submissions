@@ -54,7 +54,7 @@
   3: When accessing values from a Dictionary you will always have optionals. So if you want the actual type and not the otional you must unwrap it.<br>
   Example<br>
   ![image](https://user-images.githubusercontent.com/12196769/173171800-b8345510-0856-4bf8-a214-84bb9b5eb8b5.png)<br>
-  <i>On line 3 the ? is not nessary since an optional is returned by default.</i>
+  <i>On line 3 the ? is not nessary since an optional is returned by default.</i><br>
   4:<br>
   * What the error message means:
     Return Type used was a String, but the Value Returned was an optional.
@@ -67,15 +67,52 @@
     ![image](https://user-images.githubusercontent.com/12196769/173123025-5e7cfae9-ef3c-461b-8384-48b73b05ef9a.png)<br>
  
  # Chapter 2.0 : Day 4 ***Still working on ***
-   1:<details>
+   1: *Account Code*<br>
+   2: *Account Code*<br>
+   <details>
    <summary>Accounts Code</summary>
-      
-   </details>   
-   
-  2:<details>
-  <summary>Accounts Code</summary>
-  
-  </details>
-  
+      pub contract Hero {
 
-  3:
+    pub var allStats: {Address: Stats}
+
+pub struct Stats {
+    pub let health: Int
+    pub let armor: Int
+    pub let potions: Int
+    pub let account: Address
+
+    init(_health: Int, _armor: Int, _potions: Int, _account: Address) {
+        self.health = _health
+        self.armor = _armor
+        self.potions = _potions
+        self.account = _account
+    }
+}
+pub fun addStat(health: Int, armor: Int, potions: Int, account: Address) {
+        let newStat = Stats(_health: health, _armor: armor, _potions: potions, _account: account)
+        self.allStats[account] = newStat
+    }
+
+    init() {
+        self.allStats = {}
+    }
+
+}
+   </details>   
+  ![image](https://user-images.githubusercontent.com/12196769/173178983-762f3372-2be6-4669-8942-d224579d61bf.png)<br>
+  3:<br>
+  <detailed>
+  <summary>Account Code</summary>
+  import Hero from 0x01
+
+transaction(health: Int, armor: Int, potions: Int, account: Address) {
+
+    prepare(signer: AuthAccount) {}
+
+    execute {
+    Hero.addStat(health: health, armor: armor, potions: potions, account: account)
+        log("We're done.")
+    }
+}
+  </detailed>
+  
