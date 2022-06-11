@@ -54,6 +54,7 @@
   3: When accessing values from a Dictionary you will always have optionals. So if you want the actual type and not the otional you must unwrap it.<br>
   Example<br>
   ![image](https://user-images.githubusercontent.com/12196769/173120424-00f6258f-c59b-4020-8bf7-c5aed28962e5.png)<br>
+  <i>On line 3 the ? is not nessary since an optional is returned by default.</i>
   4:<br>
   * What the error message means:
     Return Type used was a String, but the Value Returned was an optional.
