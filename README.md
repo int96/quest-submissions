@@ -99,9 +99,9 @@ pub fun addStat(health: Int, armor: Int, potions: Int, account: Address) {
 
 }
    </details>   
-  ![image](https://user-images.githubusercontent.com/12196769/173178983-762f3372-2be6-4669-8942-d224579d61bf.png)<br>
+  [image](https://user-images.githubusercontent.com/12196769/173178983-762f3372-2be6-4669-8942-d224579d61bf.png)<br>
   3:<br>
-  <detailed>
+  <details>
   <summary>Account Code</summary>
   import Hero from 0x01
 
@@ -114,5 +114,7 @@ transaction(health: Int, armor: Int, potions: Int, account: Address) {
         log("We're done.")
     }
 }
-  </detailed>
+  </details>
+  ![image](https://user-images.githubusercontent.com/12196769/173179402-7ee9e929-c57f-4dab-be4e-a3dfaacb591f.png)<br>
+  4:<br>
   
