@@ -82,5 +82,69 @@
    # Scripts
    ![image](https://user-images.githubusercontent.com/12196769/173182685-a1333ca0-29ea-4ffb-854c-a3b3be5a12ae.png)
 
+# Chapter 3 : Day 1
+1: <i>In words, list 3 reasons why structs are different from resources.</i><br>
+You can create, copy, or overwrite them when ever you want.<br>
 
-  
+2: <i>Describe a situation where a resource might be better to use than a struct.</i><br>
+If you were going to do anything with a NFT I would use a resource, since it is harder to lose the information
+
+3: <i>What is the keyword to make a new resource?</i><br>
+create
+
+4: <i>Can a resource be created in a script or transaction (assuming there isn't a public function to create one)?</i><br>
+No, the create keyword can only be used inside a contract<br>
+
+5: <i>What is the type of the resource below?</i><br>
+<pre>
+  <code>
+pub resource Jacob {
+
+}
+  </code>
+ </pre>
+ Resource type is empty it hasn't been stated yet<br>
+ 
+6: <i>Let's play the "I Spy" game from when we were kids. I Spy 4 things wrong with this code. Please fix them.</i><br>
+
+<pre>
+  <code>
+pub contract Test {
+
+    // Hint: There's nothing wrong here ;)
+    pub resource Jacob {
+        pub let rocks: Bool
+        init() {
+            self.rocks = true
+        }
+    }
+
+    pub fun createJacob(): Jacob { // there is 1 here
+        let myJacob = Jacob() // there are 2 here
+        return myJacob // there is 1 here
+    }
+}
+  </code>
+</pre>
+
+<pre>
+  <code>
+  pub contract Test {
+
+    // Hint: There's nothing wrong here ;)
+    pub resource Jacob {
+        pub let rocks: Bool
+        init() {
+            self.rocks = true
+        }
+    }
+
+    pub fun createJacob(): @Jacob { // Was missing the @ symbol to state this is a resource
+        let myJacob <- create Jacob() // Using resources we use the <- move symbol followed by create to initizlize myJacob 
+        return <- myJacob // again we need to be moving our resource with <- move symbol
+    }
+}
+  </code>
+</pre>
+
+#
