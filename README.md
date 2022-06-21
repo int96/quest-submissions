@@ -147,4 +147,17 @@ pub contract Test {
   </code>
 </pre>
 
-#
+# Chapter 3 : Day 4
+
+1: <i>Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)</i><br>
+The first thing you can use resource interfaces for is exposes data to a resource or struct.<br>
+The second thing you can use resource interfaces for is exposes certain data to certain people.<br>
+
+2: <i>Define your own contract. Make your own resource interface and a resource that implements the interface. Create 2 functions. In the 1st function, show an example of not restricting the type of the resource and accessing its content. In the 2nd function, show an example of restricting the type of the resource and NOT being able to access its content.</i><br>
+# contract
+![image](https://user-images.githubusercontent.com/12196769/174863294-5979289a-6f23-455d-bf20-f4b152fb1d02.png)<br>
+# transaction
+![image](https://user-images.githubusercontent.com/12196769/174863439-5bc8bdd7-b189-4811-b0d0-7f84bbc18583.png)<br>
+
+3: <i>How would we fix this code?</i><br>
+
