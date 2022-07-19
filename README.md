@@ -160,4 +160,37 @@ The second thing you can use resource interfaces for is exposes certain data to 
 ![image](https://user-images.githubusercontent.com/12196769/174863439-5bc8bdd7-b189-4811-b0d0-7f84bbc18583.png)<br>
 
 3: <i>How would we fix this code?</i><br>
+<pre>
+  <code>
+  pub contract Stuff {
 
+    pub struct interface ITest {
+      pub var greeting: String
+      pub var favouriteFruit: String
+    }
+
+    // ERROR:
+    // `structure Stuff.Test does not conform 
+    // to structure interface Stuff.ITest`
+    pub struct Test: ITest {
+      pub var greeting: String
+      pub var favoriteFruit: String   // add string varible favoriteFruit
+
+      pub fun changeGreeting(newGreeting: String): String {
+        self.greeting = newGreeting
+        return self.greeting // returns the new greeting
+      }
+
+      init() {
+        self.greeting = "Hello!"
+      }
+    }
+
+    pub fun fixThis() {
+      let test: @Test{ITest} <- Test()    // had to fix this 
+      let newGreeting = test.changeGreeting(newGreeting: "Bonjour!") // ERROR HERE: `member of restricted type is not accessible: changeGreeting`
+      log(newGreeting)
+    }
+}
+  </code>
+</pre>
