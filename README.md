@@ -146,9 +146,11 @@ pub contract Test {
 }
   </code>
 </pre>
+# Chapter 3 : Day 2
+
+# Chapter 3 : Day 3
 
 # Chapter 3 : Day 4
-
 1: <i>Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)</i><br>
 The first thing you can use resource interfaces for is exposes data to a resource or struct.<br>
 The second thing you can use resource interfaces for is exposes certain data to certain people.<br>
@@ -194,3 +196,12 @@ The second thing you can use resource interfaces for is exposes certain data to 
 }
   </code>
 </pre>
+
+# Chapter 3 : Day 5
+# Chapter 4 : Day 1
+# Chapter 4 : Day 2
+# Chapter 4 : Day 3
+# Chapter 4 : Day 4
+# Chapter 5 : Day 1
+# Chapter 5 : Day 2
+# Chapter 5 : Day 3
