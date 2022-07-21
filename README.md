@@ -199,8 +199,143 @@ pub contract Meta {
 </code>
 </pre>
 # Chapter 3 : Day 3
+1:<br>
+*Contract*<br>
+<pre></code>
+pub contract Metadata {
+    
+    pub var dictionaryOfMeta: @{Int: Meta}
+
+    //
+    pub resource Meta {
+        pub let id: Int
+        pub let name: String
+
+        init(_id: Int, _name: String){
+            self.id = _id
+            self.name = _name
+            }
+    }
+
+    pub fun getReferenc(id: Int): &Meta {
+        return (&self.dictionaryOfMeta[id] as &Meta?)!
+    }
+
+    pub fun depositMeta(Meta: @Meta) {
+        self.dictionaryOfMeta[Meta.id] <-! Meta
+    }
+
+    pub fun withdrawMeta(id: Int): @Meta {
+        let Meta <- self.dictionaryOfMeta.remove(key: id) ?? panic("A resource does not exist at this id")
+        return <- Meta
+    }
+
+    pub fun createMeta(id: Int, name: String): @Meta {
+        return <- create Meta(_id: id, _name: name)
+    }
+
+    init() {
+        self.dictionaryOfMeta <- {}
+    }
+
+}
+</code></pre>
+*Transactions*<br>
+<pre><code>
+// Deposit transaction
+import Metadata from 0x01
+
+transaction(id: Int, name: String) {
+
+  prepare(acct: AuthAccount) {}
+
+  execute {
+    let Meta <- Metadata.createMeta(id: id, name: name)
+    Metadata.depositMeta(Meta: <- Meta)
+
+    log("Item deposited.")
+  }
+}
+</code></pre>
+<br>
+<pre><code>
+// Withdraw Transaction
+import Metadata from 0x01
+
+transaction(id: Int) {
+
+  prepare(acct: AuthAccount) {}
+
+  execute {
+    let Meta <- Metadata.withdrawMeta(id: id)
+    Metadata.depositMeta(Meta: <- Meta)
+
+    log("Item withdrawn.")
+  }
+}
+</code></pre>
+<br>
+2:<br>
+*Scripts*<br>
+<pre><code>
+import Metadata from 0x01
+
+pub fun main(id: Int): &Metadata.Meta{
+  return Metadata.getReference(id: id)
+}
+</code></pre>
+<br>
+3:<br>
+References are real good at letting you only work with some of the data without you having to load the whole resource.<br>
 
 # Chapter 3 : Day 4
+chapter 3 day 4
+
+1: <i>Explain, in your own words, the 2 things resource interfaces can be used for (we went over both in today's content)</i><br>
+The first thing you can use resource interfaces for is exposes data to a resource or struct.<br>
+The second thing you can use resource interfaces for is exposes certain data to certain people.<br>
+
+2: <i>Define your own contract. Make your own resource interface and a resource that implements the interface. Create 2 functions. In the 1st function, show an example of not restricting the type of the resource and accessing its content. In the 2nd function, show an example of restricting the type of the resource and NOT being able to access its content.</i><br>
+# contract
+![image](https://user-images.githubusercontent.com/12196769/174863294-5979289a-6f23-455d-bf20-f4b152fb1d02.png)<br>
+# transaction
+![image](https://user-images.githubusercontent.com/12196769/174863439-5bc8bdd7-b189-4811-b0d0-7f84bbc18583.png)<br>
+
+3: <i>How would we fix this code?</i><br>
+<pre>
+  <code>
+  pub contract Stuff {
+
+    pub struct interface ITest {
+      pub var greeting: String
+      pub var favouriteFruit: String
+    }
+
+    // ERROR:
+    // `structure Stuff.Test does not conform 
+    // to structure interface Stuff.ITest`
+    pub struct Test: ITest {
+      pub var greeting: String
+      pub var favoriteFruit: String   // add string varible favoriteFruit
+
+      pub fun changeGreeting(newGreeting: String): String {
+        self.greeting = newGreeting
+        return self.greeting // returns the new greeting
+      }
+
+      init() {
+        self.greeting = "Hello!"
+      }
+    }
+
+    pub fun fixThis() {
+      let test: @Test{ITest} <- Test()    // had to fix this 
+      let newGreeting = test.changeGreeting(newGreeting: "Bonjour!") // ERROR HERE: `member of restricted type is not accessible: changeGreeting`
+      log(newGreeting)
+    }
+}
+  </code>
+</pre>
 
 # Chapter 3 : Day 5
 # Chapter 4 : Day 1
