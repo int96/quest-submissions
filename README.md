@@ -147,7 +147,57 @@ pub contract Test {
   </code>
 </pre>
 # Chapter 3 : Day 2
+<pre>
+<code>
+pub contract Meta {
+    
+    pub var arrayOfNumbers: @[numbers]
+    pub var dictionaryOfImages: @{String: imageName}
 
+    //
+    pub resource numbers {
+        pub let message: String
+        init() {
+            self.message = "Numbers_Holder"
+        }
+    }
+
+    //
+    pub resource imageName {
+        pub let message: String
+        init(){
+            self.message = "Image_Holder"
+            }
+    }
+    
+    // Array Functions
+    pub fun addNumber(number: @numbers) {
+        self.arrayOfNumbers.append(<- number)
+    }
+
+    pub fun removeNumber(index: Int): @numbers {
+        return <- self.arrayOfNumbers.remove(at: index)
+    }
+
+    // dictionary functions
+    pub fun addImage(image: @imageName){
+        let key = image.message
+        self.dictionaryOfImages[key] <-! image
+    }
+
+    pub fun removeImage(key: String): @imageName {
+        let image <- self.dictionaryOfImages.remove(key: key) ?? panic("Could not find the image!")
+        return <- image
+    }
+
+    init() {
+        self.arrayOfNumbers <- []
+        self.dictionaryOfImages <- {}
+    }
+
+}
+</code>
+</pre>
 # Chapter 3 : Day 3
 
 # Chapter 3 : Day 4
