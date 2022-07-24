@@ -371,8 +371,8 @@ access(all) contract SomeContract {
             /**************/
             /*** AREA 1 ***/
             /**************/
-            // read   - 
-            // write  - 
+            // read   - a, b, c, d
+            // write  - a, b, c, d
         }
 
         init() {
@@ -390,6 +390,8 @@ access(all) contract SomeContract {
             /**************/
             /*** AREA 2 ***/
             /**************/
+            // read   - a, b, c
+            // write  - a, 
         }
 
         init() {
@@ -405,11 +407,25 @@ access(all) contract SomeContract {
         /**************/
         /*** AREA 3 ****/
         /**************/
+        // read   - a, b, c
+        // write  - a
     }
 
     init() {
         self.testStruct = SomeStruct()
     }
+}
+</code></pre>
+:Script:<br>
+<pre><code>
+import SomeContract from 0x01
+
+pub fun main() {
+  /**************/
+  /*** AREA 4 ***/
+  /**************/
+  // read   - a, b
+  // write  - a = yes but it want do anything so NO, 
 }
 </code></pre>
 # Chapter 4 : Day 1
